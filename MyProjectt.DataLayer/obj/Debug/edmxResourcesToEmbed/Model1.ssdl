@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="projectmainModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AttachFile">
+    <Key>
+      <PropertyRef Name="ID_AttachID" />
+    </Key>
+    <Property Name="ID_AttachID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FileDate" Type="varbinary(max)" Nullable="false" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FileSize" Type="int" />
+    <Property Name="LetterID" Type="int" />
+  </EntityType>
+  <EntityType Name="Job">
+    <Key>
+      <PropertyRef Name="JobID" />
+    </Key>
+    <Property Name="JobID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Job_LevelId" Type="int" />
+    <Property Name="DeterminaljobLevelid" Type="int" />
+  </EntityType>
+  <EntityType Name="Letter">
+    <Key>
+      <PropertyRef Name="LetterID" />
+    </Key>
+    <Property Name="LetterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LetterSubject" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="LetterAbstract" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="LetterText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LetterNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SecurityType" Type="tinyint" Nullable="false" />
+    <Property Name="LetterTypeAction" Type="tinyint" Nullable="false" />
+    <Property Name="LetterFollow" Type="tinyint" Nullable="false" />
+    <Property Name="LetterAttachment" Type="tinyint" Nullable="false" />
+    <Property Name="LetterResponse" Type="tinyint" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="SendDate" Type="datetime" />
+    <Property Name="BayganiType" Type="tinyint" />
+    <Property Name="LetterType" Type="tinyint" Nullable="false" />
+    <Property Name="DraftType" Type="tinyint" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="AnswerDeadline" Type="datetime" />
+    <Property Name="Reference" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ReplyRetterID" Type="int" />
+    <Property Name="LetterFile" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="NewID" />
+    </Key>
+    <Property Name="NewID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="NewsText" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="FileNews" Type="varbinary(max)" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+    <Property Name="SendDate" Type="datetime" />
+    <Property Name="IsSend" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="Note">
+    <Key>
+      <PropertyRef Name="NoteID" />
+    </Key>
+    <Property Name="NoteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubjectNote" Type="nvarchar" MaxLength="50" />
+    <Property Name="SubjectMatn" Type="nvarchar(max)" />
+    <Property Name="UserID_Sender" Type="int" />
+    <Property Name="FullNameSender" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDateNod" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ReferenceLetter">
+    <Key>
+      <PropertyRef Name="ReferenceLetterID" />
+    </Key>
+    <Property Name="ReferenceLetterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LetterID" Type="int" Nullable="false" />
+    <Property Name="UserIDReference" Type="int" Nullable="false" />
+    <Property Name="UserIDReciveID" Type="int" Nullable="false" />
+    <Property Name="FullNameRecive" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="FullNameReference" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="ReferenceDate" Type="datetime" />
+    <Property Name="ReadType" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="LevelNumbers" Type="int" />
+    <Property Name="IsShow" Type="bigint" />
+  </EntityType>
+  <EntityType Name="Remember">
+    <Key>
+      <PropertyRef Name="RememberID" />
+    </Key>
+    <Property Name="RememberID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Text" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="RememberDate" Type="datetime" Nullable="false" />
+    <Property Name="IsRead" Type="tinyint" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SendLetter">
+    <Key>
+      <PropertyRef Name="SendLetterID" />
+    </Key>
+    <Property Name="SendLetterID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SendDateLetter" Type="datetime" Nullable="false" />
+    <Property Name="LetterID" Type="int" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserID_SendLetters" Type="int" />
+    <Property Name="IsRead" Type="bigint" />
+    <Property Name="FullNameReciveLetters" Type="nvarchar" MaxLength="100" />
+    <Property Name="IsShow" Type="bigint" />
+    <Property Name="FullNameSender" Type="nvarchar" MaxLength="100" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SendNote">
+    <Key>
+      <PropertyRef Name="SendNoteID" />
+    </Key>
+    <Property Name="SendNoteID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID_Recive" Type="int" />
+    <Property Name="NoteID" Type="int" />
+    <Property Name="SendDate" Type="datetime" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UserName" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="PersonalCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Gender" Type="tinyint" Nullable="false" />
+    <Property Name="Activity" Type="tinyint" Nullable="false" />
+    <Property Name="UserTell" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="UserImage" Type="nchar" MaxLength="1000" Nullable="false" />
+    <Property Name="UserSignatures" Type="nchar" MaxLength="1000" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="UserTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLog">
+    <Key>
+      <PropertyRef Name="LoginID" />
+    </Key>
+    <Property Name="LoginID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="ComputerName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IPAddress" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EnterDateTime" Type="datetime" />
+    <Property Name="ExitDateTime" Type="datetime" />
+    <Property Name="SomHors" Type="real" />
+  </EntityType>
+  <EntityType Name="UserSetJob">
+    <Key>
+      <PropertyRef Name="SID" />
+    </Key>
+    <Property Name="SID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="JobID" Type="int" Nullable="false" />
+    <Property Name="SetDateJob" Type="datetime" />
+    <Property Name="EndDateJob" Type="datetime" />
+    <Property Name="Status" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="UserTypeID" />
+    </Key>
+    <Property Name="UserTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TypeName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CodeType" Type="int" />
+  </EntityType>
+  <EntityType Name="Vw_jobss">
+    <Key>
+      <PropertyRef Name="JobID" />
+      <PropertyRef Name="JobName" />
+    </Key>
+    <Property Name="JobID" Type="int" Nullable="false" />
+    <Property Name="JobName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Job_LevelId" Type="int" />
+    <Property Name="DeterminaljobLevelid" Type="int" />
+    <Property Name="countchild" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'projectmain.dbo.VW_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VW_Users">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="UserFirstName" />
+      <PropertyRef Name="UserFamily" />
+      <PropertyRef Name="UserName" />
+      <PropertyRef Name="PersonalCode" />
+      <PropertyRef Name="UserEmail" />
+      <PropertyRef Name="FarsiGender" />
+      <PropertyRef Name="FarsiActivity" />
+      <PropertyRef Name="UserTell" />
+      <PropertyRef Name="UserImage" />
+      <PropertyRef Name="UserSignturess" />
+      <PropertyRef Name="CreateDate" />
+      <PropertyRef Name="Gender" />
+      <PropertyRef Name="Activity" />
+      <PropertyRef Name="JobName" />
+      <PropertyRef Name="status" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="UserFirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserFamily" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PersonalCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserEmail" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FarsiGender" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FarsiActivity" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UserTell" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="UserImage" Type="nchar" MaxLength="1000" Nullable="false" />
+    <Property Name="UserSignturess" Type="nchar" MaxLength="1000" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="Gender" Type="tinyint" Nullable="false" />
+    <Property Name="Activity" Type="tinyint" Nullable="false" />
+    <Property Name="JobName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="EndDateJob" Type="datetime" />
+    <Property Name="status" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AttachFile_Letter">
+    <End Role="Letter" Type="Self.Letter" Multiplicity="0..1" />
+    <End Role="AttachFile" Type="Self.AttachFile" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Letter">
+        <PropertyRef Name="LetterID" />
+      </Principal>
+      <Dependent Role="AttachFile">
+        <PropertyRef Name="LetterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Letter_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Letter" Type="Self.Letter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Letter">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_News_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="News" Type="Self.News" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="News">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Note_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="Note" Type="Self.Note" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Note">
+        <PropertyRef Name="UserID_Sender" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenceLetter_Letter">
+    <End Role="Letter" Type="Self.Letter" Multiplicity="1" />
+    <End Role="ReferenceLetter" Type="Self.ReferenceLetter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Letter">
+        <PropertyRef Name="LetterID" />
+      </Principal>
+      <Dependent Role="ReferenceLetter">
+        <PropertyRef Name="LetterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenceLetter_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="ReferenceLetter" Type="Self.ReferenceLetter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ReferenceLetter">
+        <PropertyRef Name="UserIDReciveID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ReferenceLetter_User1">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="ReferenceLetter" Type="Self.ReferenceLetter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="ReferenceLetter">
+        <PropertyRef Name="UserIDReference" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Remember_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="Remember" Type="Self.Remember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="Remember">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SendLetter_Letter">
+    <End Role="Letter" Type="Self.Letter" Multiplicity="1" />
+    <End Role="SendLetter" Type="Self.SendLetter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Letter">
+        <PropertyRef Name="LetterID" />
+      </Principal>
+      <Dependent Role="SendLetter">
+        <PropertyRef Name="LetterID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SendLetter_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="SendLetter" Type="Self.SendLetter" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SendLetter">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SendNote_Note">
+    <End Role="Note" Type="Self.Note" Multiplicity="0..1" />
+    <End Role="SendNote" Type="Self.SendNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Note">
+        <PropertyRef Name="NoteID" />
+      </Principal>
+      <Dependent Role="SendNote">
+        <PropertyRef Name="NoteID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SendNote_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="SendNote" Type="Self.SendNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="SendNote">
+        <PropertyRef Name="UserID_Recive" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_UserType">
+    <End Role="UserType" Type="Self.UserType" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserType">
+        <PropertyRef Name="UserTypeID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="UserTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLog_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserLog" Type="Self.UserLog" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserLog">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSetJob_Job">
+    <End Role="Job" Type="Self.Job" Multiplicity="1" />
+    <End Role="UserSetJob" Type="Self.UserSetJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Job">
+        <PropertyRef Name="JobID" />
+      </Principal>
+      <Dependent Role="UserSetJob">
+        <PropertyRef Name="JobID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSetJob_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserSetJob" Type="Self.UserSetJob" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="UserID" />
+      </Principal>
+      <Dependent Role="UserSetJob">
+        <PropertyRef Name="UserID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="projectmainModelStoreContainer">
+    <EntitySet Name="AttachFile" EntityType="Self.AttachFile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Job" EntityType="Self.Job" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Letter" EntityType="Self.Letter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="News" EntityType="Self.News" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Note" EntityType="Self.Note" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReferenceLetter" EntityType="Self.ReferenceLetter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Remember" EntityType="Self.Remember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SendLetter" EntityType="Self.SendLetter" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SendNote" EntityType="Self.SendNote" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLog" EntityType="Self.UserLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserSetJob" EntityType="Self.UserSetJob" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vw_jobss" EntityType="Self.Vw_jobss" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VW_Users" EntityType="Self.VW_Users" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VW_Users].[UserID] AS [UserID], 
+    [VW_Users].[UserFirstName] AS [UserFirstName], 
+    [VW_Users].[UserFamily] AS [UserFamily], 
+    [VW_Users].[UserName] AS [UserName], 
+    [VW_Users].[PersonalCode] AS [PersonalCode], 
+    [VW_Users].[UserEmail] AS [UserEmail], 
+    [VW_Users].[FarsiGender] AS [FarsiGender], 
+    [VW_Users].[FarsiActivity] AS [FarsiActivity], 
+    [VW_Users].[UserTell] AS [UserTell], 
+    [VW_Users].[BirthDate] AS [BirthDate], 
+    [VW_Users].[UserImage] AS [UserImage], 
+    [VW_Users].[UserSignturess] AS [UserSignturess], 
+    [VW_Users].[CreateDate] AS [CreateDate], 
+    [VW_Users].[Gender] AS [Gender], 
+    [VW_Users].[Activity] AS [Activity], 
+    [VW_Users].[JobName] AS [JobName], 
+    [VW_Users].[EndDateJob] AS [EndDateJob], 
+    [VW_Users].[status] AS [status]
+    FROM [dbo].[VW_Users] AS [VW_Users]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_AttachFile_Letter" Association="Self.FK_AttachFile_Letter">
+      <End Role="Letter" EntitySet="Letter" />
+      <End Role="AttachFile" EntitySet="AttachFile" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Letter_User" Association="Self.FK_Letter_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Letter" EntitySet="Letter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_News_User" Association="Self.FK_News_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="News" EntitySet="News" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Note_User" Association="Self.FK_Note_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Note" EntitySet="Note" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenceLetter_Letter" Association="Self.FK_ReferenceLetter_Letter">
+      <End Role="Letter" EntitySet="Letter" />
+      <End Role="ReferenceLetter" EntitySet="ReferenceLetter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenceLetter_User" Association="Self.FK_ReferenceLetter_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="ReferenceLetter" EntitySet="ReferenceLetter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ReferenceLetter_User1" Association="Self.FK_ReferenceLetter_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="ReferenceLetter" EntitySet="ReferenceLetter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Remember_User" Association="Self.FK_Remember_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Remember" EntitySet="Remember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SendLetter_Letter" Association="Self.FK_SendLetter_Letter">
+      <End Role="Letter" EntitySet="Letter" />
+      <End Role="SendLetter" EntitySet="SendLetter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SendLetter_User" Association="Self.FK_SendLetter_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="SendLetter" EntitySet="SendLetter" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SendNote_Note" Association="Self.FK_SendNote_Note">
+      <End Role="Note" EntitySet="Note" />
+      <End Role="SendNote" EntitySet="SendNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SendNote_User" Association="Self.FK_SendNote_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="SendNote" EntitySet="SendNote" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_UserType" Association="Self.FK_User_UserType">
+      <End Role="UserType" EntitySet="UserType" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLog_User" Association="Self.FK_UserLog_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserLog" EntitySet="UserLog" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSetJob_Job" Association="Self.FK_UserSetJob_Job">
+      <End Role="Job" EntitySet="Job" />
+      <End Role="UserSetJob" EntitySet="UserSetJob" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSetJob_User" Association="Self.FK_UserSetJob_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserSetJob" EntitySet="UserSetJob" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

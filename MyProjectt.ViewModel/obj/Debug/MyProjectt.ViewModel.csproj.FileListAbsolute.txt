@@ -1,0 +1,11 @@
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.ViewModel\bin\Debug\MyProjectt.ViewModel.dll
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.ViewModel\bin\Debug\MyProjectt.ViewModel.pdb
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.ViewModel\obj\Debug\MyProjectt.ViewModel.dll
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.ViewModel\obj\Debug\MyProjectt.ViewModel.pdb
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.ViewModel\obj\Debug\MyProjectt.ViewModel.csprojResolveAssemblyReference.cache
+D:\Git\myprojects\MyProjectt\MyProjectt.ViewModel\bin\Debug\MyProjectt.ViewModel.dll
+D:\Git\myprojects\MyProjectt\MyProjectt.ViewModel\bin\Debug\MyProjectt.ViewModel.pdb
+D:\Git\myprojects\MyProjectt\MyProjectt.ViewModel\obj\Debug\MyProjectt.ViewModel.csproj.AssemblyReference.cache
+D:\Git\myprojects\MyProjectt\MyProjectt.ViewModel\obj\Debug\MyProjectt.ViewModel.csproj.CoreCompileInputs.cache
+D:\Git\myprojects\MyProjectt\MyProjectt.ViewModel\obj\Debug\MyProjectt.ViewModel.dll
+D:\Git\myprojects\MyProjectt\MyProjectt.ViewModel\obj\Debug\MyProjectt.ViewModel.pdb

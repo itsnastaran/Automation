@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5F9BF8E4-46DA-46A8-8B78-CE2AC64B81F9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MyProjectt</RootNamespace>
+    <AssemblyName>MyProjectt</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CE172F2A7332E5E255FE002B636E80B23B332A9F</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>MyProjectt_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Charts, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar2, Version=14.1.0.37, Culture=neutral, PublicKeyToken=7eb7c3a35b91de04, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DotNetBar for Windows Forms\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.Instrumentation, Version=14.1.0.37, Culture=neutral, PublicKeyToken=f90dc37c26666a67" />
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Win32.Primitives.4.3.0\lib\net46\Microsoft.Win32.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="PersianDate">
+      <HintPath>..\..\..\Atomasian\PersianDate\PersianDate.dll</HintPath>
+    </Reference>
+    <Reference Include="PopupControl">
+      <HintPath>..\..\..\Atomasian\PersianDate\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Console, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Console.4.3.0\lib\net46\System.Console.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.3.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Diagnostics.Tracing, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Diagnostics.Tracing.4.3.0\lib\net462\System.Diagnostics.Tracing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Globalization.Calendars, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Globalization.Calendars.4.3.0\lib\net46\System.Globalization.Calendars.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.4.3.0\lib\net462\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.4.3.0\lib\net46\System.IO.Compression.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.IO.Compression.ZipFile, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Compression.ZipFile.4.3.0\lib\net46\System.IO.Compression.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.4.3.0\lib\net46\System.IO.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Http.4.3.0\lib\net46\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Sockets, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Net.Sockets.4.3.0\lib\net46\System.Net.Sockets.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.0\lib\net462\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Extensions, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.Extensions.4.3.0\lib\net462\System.Runtime.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.4.3.0\lib\net462\System.Runtime.InteropServices.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Algorithms, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.0\lib\net461\System.Security.Cryptography.Algorithms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Encoding, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Encoding.4.3.0\lib\net46\System.Security.Cryptography.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.Primitives.4.3.0\lib\net46\System.Security.Cryptography.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Cryptography.X509Certificates, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Cryptography.X509Certificates.4.3.0\lib\net461\System.Security.Cryptography.X509Certificates.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.ReaderWriter, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Xml.ReaderWriter.4.3.0\lib\net46\System.Xml.ReaderWriter.dll</HintPath>
+    </Reference>
+    <Reference Include="Waher.Events, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Waher.Events.1.1.2\lib\netstandard1.3\Waher.Events.dll</HintPath>
+    </Reference>
+    <Reference Include="Waher.Runtime.Cache, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Waher.Runtime.Cache.1.0.6\lib\netstandard1.3\Waher.Runtime.Cache.dll</HintPath>
+    </Reference>
+    <Reference Include="Waher.Runtime.Inventory, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Waher.Runtime.Inventory.1.1.2\lib\netstandard1.3\Waher.Runtime.Inventory.dll</HintPath>
+    </Reference>
+    <Reference Include="Waher.Runtime.Threading, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Waher.Runtime.Threading.1.2.1\lib\netstandard1.3\Waher.Runtime.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="Waher.Runtime.Transactions, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Waher.Runtime.Transactions.1.2.0\lib\netstandard1.3\Waher.Runtime.Transactions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel\Frm_AddEditJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_AddEditJob.Designer.cs">
+      <DependentUpon>Frm_AddEditJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_AddEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_AddEditUser.Designer.cs">
+      <DependentUpon>Frm_AddEditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_AddRemember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_AddRemember.Designer.cs">
+      <DependentUpon>Frm_AddRemember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_CreateNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_CreateNews.Designer.cs">
+      <DependentUpon>Frm_CreateNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ExitLoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ExitLoginUser.Designer.cs">
+      <DependentUpon>Frm_ExitLoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_JobHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_JobHistory.Designer.cs">
+      <DependentUpon>Frm_JobHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_MainAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_MainAdmin.Designer.cs">
+      <DependentUpon>Frm_MainAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_SetUserJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_SetUserJob.Designer.cs">
+      <DependentUpon>Frm_SetUserJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ShowInformationUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ShowInformationUser.Designer.cs">
+      <DependentUpon>Frm_ShowInformationUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ShowJobs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ShowJobs.Designer.cs">
+      <DependentUpon>Frm_ShowJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_showNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_showNews.Designer.cs">
+      <DependentUpon>Frm_showNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ShowUserForJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_ShowUserForJob.Designer.cs">
+      <DependentUpon>Frm_ShowUserForJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_showUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Frm_showUsers.Designer.cs">
+      <DependentUpon>Frm_showUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\AdvancedTextEditorControl\AdvancedTextEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Editor\AdvancedTextEditorControl\AdvancedTextEditor.Designer.cs">
+      <DependentUpon>AdvancedTextEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\AdvancedTextEditorControl\FontComboBoxControl\FontComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editor\AdvancedTextEditorControl\Dialogs\dlgFind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Editor\AdvancedTextEditorControl\Dialogs\dlgFind.Designer.cs">
+      <DependentUpon>dlgFind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Editor\ExtendedRichTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Editor\TextRulerControl\TextRuler.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Login.Designer.cs">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_AddEditRemember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_AddEditRemember.Designer.cs">
+      <DependentUpon>Frm_AddEditRemember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersAction.Designer.cs">
+      <DependentUpon>Frm_AllLettersAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersInstans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersInstans.Designer.cs">
+      <DependentUpon>Frm_AllLettersInstans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersRead.Designer.cs">
+      <DependentUpon>Frm_AllLettersRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersUnRead.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_AllLettersUnRead.Designer.cs">
+      <DependentUpon>Frm_AllLettersUnRead.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_AllNotRecive.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_AllNotRecive.Designer.cs">
+      <DependentUpon>Frm_AllNotRecive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_CreateLetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_CreateLetter.Designer.cs">
+      <DependentUpon>Frm_CreateLetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_CreateSendNots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_CreateSendNots.Designer.cs">
+      <DependentUpon>Frm_CreateSendNots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_DetailNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_DetailNews.Designer.cs">
+      <DependentUpon>Frm_DetailNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_MainUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_MainUser.Designer.cs">
+      <DependentUpon>Frm_MainUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_SelectUserSendLatter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_SelectUserSendLatter.Designer.cs">
+      <DependentUpon>Frm_SelectUserSendLatter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_SendLatters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_SendLatters.Designer.cs">
+      <DependentUpon>Frm_SendLatters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_SendNots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_SendNots.Designer.cs">
+      <DependentUpon>Frm_SendNots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_SendRefrencetters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_SendRefrencetters.Designer.cs">
+      <DependentUpon>Frm_SendRefrencetters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_showCirculationletter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_showCirculationletter.Designer.cs">
+      <DependentUpon>Frm_showCirculationletter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_ShowDraft.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_ShowDraft.Designer.cs">
+      <DependentUpon>Frm_ShowDraft.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_ShowLetterFollow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_ShowLetterFollow.Designer.cs">
+      <DependentUpon>Frm_ShowLetterFollow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_ShowLetterrefrence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_ShowLetterrefrence.Designer.cs">
+      <DependentUpon>Frm_ShowLetterrefrence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_ShownewMesseage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_ShownewMesseage.Designer.cs">
+      <DependentUpon>Frm_ShownewMesseage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_ShowNews.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_ShowNews.Designer.cs">
+      <DependentUpon>Frm_ShowNews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_ShowReciveRefrenceLetters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_ShowReciveRefrenceLetters.Designer.cs">
+      <DependentUpon>Frm_ShowReciveRefrenceLetters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_ShowRemmber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_ShowRemmber.Designer.cs">
+      <DependentUpon>Frm_ShowRemmber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\Frm_RecivAllLatters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\Frm_RecivAllLatters.Designer.cs">
+      <DependentUpon>Frm_RecivAllLatters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinValidator\Validator\BaseValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinValidator\Validator\BaseValidator.designer.cs">
+      <DependentUpon>BaseValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinValidator\Validator\CustomValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinValidator\Validator\CustomValidator.designer.cs">
+      <DependentUpon>CustomValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinValidator\Validator\RangeValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinValidator\Validator\RangeValidator.designer.cs">
+      <DependentUpon>RangeValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinValidator\Validator\RegularExpressionValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinValidator\Validator\RegularExpressionValidator.designer.cs">
+      <DependentUpon>RegularExpressionValidator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WinValidator\Validator\RequiredFieldValidator.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinValidator\Validator\RequiredFieldValidator.designer.cs">
+      <DependentUpon>RequiredFieldValidator.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminPanel\Frm_AddEditJob.resx">
+      <DependentUpon>Frm_AddEditJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_AddEditUser.resx">
+      <DependentUpon>Frm_AddEditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_AddRemember.resx">
+      <DependentUpon>Frm_AddRemember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_CreateNews.resx">
+      <DependentUpon>Frm_CreateNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_ExitLoginUser.resx">
+      <DependentUpon>Frm_ExitLoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_JobHistory.resx">
+      <DependentUpon>Frm_JobHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_MainAdmin.resx">
+      <DependentUpon>Frm_MainAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_SetUserJob.resx">
+      <DependentUpon>Frm_SetUserJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_ShowInformationUser.resx">
+      <DependentUpon>Frm_ShowInformationUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_ShowJobs.resx">
+      <DependentUpon>Frm_ShowJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_showNews.resx">
+      <DependentUpon>Frm_showNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_ShowUserForJob.resx">
+      <DependentUpon>Frm_ShowUserForJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminPanel\Frm_showUsers.resx">
+      <DependentUpon>Frm_showUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\AdvancedTextEditorControl\AdvancedTextEditor.resx">
+      <DependentUpon>AdvancedTextEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editor\AdvancedTextEditorControl\Dialogs\dlgFind.resx">
+      <DependentUpon>dlgFind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_Login.resx">
+      <DependentUpon>Frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_AddEditRemember.resx">
+      <DependentUpon>Frm_AddEditRemember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_AllLettersAction.resx">
+      <DependentUpon>Frm_AllLettersAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_AllLettersInstans.resx">
+      <DependentUpon>Frm_AllLettersInstans.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_AllLettersRead.resx">
+      <DependentUpon>Frm_AllLettersRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_AllLettersUnRead.resx">
+      <DependentUpon>Frm_AllLettersUnRead.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_AllNotRecive.resx">
+      <DependentUpon>Frm_AllNotRecive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_CreateLetter.resx">
+      <DependentUpon>Frm_CreateLetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_CreateSendNots.resx">
+      <DependentUpon>Frm_CreateSendNots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_DetailNews.resx">
+      <DependentUpon>Frm_DetailNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_MainUser.resx">
+      <DependentUpon>Frm_MainUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_SelectUserSendLatter.resx">
+      <DependentUpon>Frm_SelectUserSendLatter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_SendLatters.resx">
+      <DependentUpon>Frm_SendLatters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_SendNots.resx">
+      <DependentUpon>Frm_SendNots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_SendRefrencetters.resx">
+      <DependentUpon>Frm_SendRefrencetters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_showCirculationletter.resx">
+      <DependentUpon>Frm_showCirculationletter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_ShowDraft.resx">
+      <DependentUpon>Frm_ShowDraft.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_ShowLetterFollow.resx">
+      <DependentUpon>Frm_ShowLetterFollow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_ShowLetterrefrence.resx">
+      <DependentUpon>Frm_ShowLetterrefrence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_ShownewMesseage.resx">
+      <DependentUpon>Frm_ShownewMesseage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_ShowNews.resx">
+      <DependentUpon>Frm_ShowNews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_RecivAllLatters.resx">
+      <DependentUpon>Frm_RecivAllLatters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_ShowReciveRefrenceLetters.resx">
+      <DependentUpon>Frm_ShowReciveRefrenceLetters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\Frm_ShowRemmber.resx">
+      <DependentUpon>Frm_ShowRemmber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinValidator\Validator\BaseValidator.resx">
+      <DependentUpon>BaseValidator.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Editor\Resources\Thumbs.db" />
+    <None Include="MyProjectt_TemporaryKey.pfx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyProjectt.Bissuns\MyProjectt.Bissuns.csproj">
+      <Project>{aa63ffcc-c943-4569-92f7-a60431a8b7f9}</Project>
+      <Name>MyProjectt.Bissuns</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProjectt.DataLayer\MyProjectt.DataLayer.csproj">
+      <Project>{a61ae982-7854-47c1-b3e6-11e6432596ca}</Project>
+      <Name>MyProjectt.DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProjectt.Utility\MyProjectt.Utility.csproj">
+      <Project>{cde29d95-1c27-471f-88c4-9cec415aeb67}</Project>
+      <Name>MyProjectt.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyProjectt.ViewModel\MyProjectt.ViewModel.csproj">
+      <Project>{72f37442-cc27-4472-b7a5-26dd0dd00b95}</Project>
+      <Name>MyProjectt.ViewModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultuserpic.jpg" />
+    <None Include="Resources\signature.jpg" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\1325236148_DeleteRed.png" />
+    <None Include="Resources\find1.png" />
+    <None Include="Resources\lock.png" />
+    <Content Include="Editor\Resources\l_indent_pos_lower.png" />
+    <Content Include="Editor\Resources\l_indet_pos_upper.png" />
+    <Content Include="Editor\Resources\r_indent_pos.png" />
+    <Content Include="Editor\Resources\tab_pos.png" />
+    <None Include="Resources\yes.png" />
+    <None Include="Resources\bolandgu.png" />
+    <None Include="Resources\mailbox_2.png" />
+    <Content Include="WinValidator\New Text Document.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>

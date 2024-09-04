@@ -1,0 +1,11 @@
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.Utility\bin\Debug\MyProjectt.Utility.dll
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.Utility\bin\Debug\MyProjectt.Utility.pdb
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.Utility\obj\Debug\MyProjectt.Utility.csprojResolveAssemblyReference.cache
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.Utility\obj\Debug\MyProjectt.Utility.dll
+E:\ChandManzoore\7-csharp\codes\MyProjectt\MyProjectt.Utility\obj\Debug\MyProjectt.Utility.pdb
+D:\Git\myprojects\MyProjectt\MyProjectt.Utility\bin\Debug\MyProjectt.Utility.dll
+D:\Git\myprojects\MyProjectt\MyProjectt.Utility\bin\Debug\MyProjectt.Utility.pdb
+D:\Git\myprojects\MyProjectt\MyProjectt.Utility\obj\Debug\MyProjectt.Utility.csproj.AssemblyReference.cache
+D:\Git\myprojects\MyProjectt\MyProjectt.Utility\obj\Debug\MyProjectt.Utility.csproj.CoreCompileInputs.cache
+D:\Git\myprojects\MyProjectt\MyProjectt.Utility\obj\Debug\MyProjectt.Utility.dll
+D:\Git\myprojects\MyProjectt\MyProjectt.Utility\obj\Debug\MyProjectt.Utility.pdb

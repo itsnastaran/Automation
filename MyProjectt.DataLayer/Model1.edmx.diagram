@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2a9e6007e3a94f6e81334115c56649ee" Name="Diagram1">
+        <EntityTypeShape EntityType="projectmainModel.AttachFile" Width="1.5" PointX="7.5" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.Job" Width="1.5" PointX="8" PointY="19.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.Letter" Width="1.5" PointX="5.25" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.News" Width="1.5" PointX="5.25" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.Note" Width="1.5" PointX="5.25" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.ReferenceLetter" Width="1.5" PointX="7.5" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.Remember" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.SendLetter" Width="1.5" PointX="10.5" PointY="11" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.SendNote" Width="1.5" PointX="7.5" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.User" Width="1.5" PointX="3" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.UserLog" Width="1.5" PointX="5.25" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.UserSetJob" Width="1.5" PointX="10.25" PointY="15.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.UserType" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.Vw_jobss" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="projectmainModel.VW_Users" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="projectmainModel.FK_AttachFile_Letter" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_UserSetJob_Job" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_Letter_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_ReferenceLetter_Letter" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_SendLetter_Letter" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_News_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_Note_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_SendNote_Note" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_ReferenceLetter_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_ReferenceLetter_User1" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_Remember_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_SendLetter_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_SendNote_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_User_UserType" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_UserLog_User" ManuallyRouted="false" />
+        <AssociationConnector Association="projectmainModel.FK_UserSetJob_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
